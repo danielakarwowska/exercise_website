@@ -5,5 +5,5 @@ import App from './app'
 import './style.scss'
 
 const dom = document.getElementById('app')
-const root = createRoot(dom!)
+const root = createRoot(dom)
 root.render(<App />)
