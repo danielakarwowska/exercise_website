@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode } from "react"
+import { Dispatch, ReactNode } from "react"
 
 export type Props = {
     children: ReactNode
@@ -13,3 +13,4 @@ export type SelectedArticles = {
     title: string,
     description: string  
 }
+export type SetSelectedArticles = Dispatch<React.SetStateAction<SelectedArticles[]>>

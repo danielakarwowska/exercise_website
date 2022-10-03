@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Layout from './components/Layout'
 import PageArticles from './pages/Articles'
 
@@ -8,6 +8,7 @@ const App = (): JSX.Element => {
     const [articles, setArticles] = useState<Articles[]>([])
 
     const [selectedArticles, setSelectedArticles] = useState<SelectedArticles[]>([])
+    
     useEffect(() => {
         setArticles([
             {
@@ -32,7 +33,7 @@ const App = (): JSX.Element => {
     }, [])
     return (
         <Layout>
-            <PageArticles articles={articles} selectedArticles={selectedArticles}   />
+            <PageArticles articles={articles} selectedArticles={selectedArticles} setSelectedArticles={setSelectedArticles}  />
         </Layout>
     )
 }
