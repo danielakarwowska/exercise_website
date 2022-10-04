@@ -1,12 +1,12 @@
 import React from "react"
 import {Grid} from 'semantic-ui-react'
-import ArticlesList from './Articles_list'
-import ArticlesSelection from './Articles_selection'
+import ArticlesList from '../components/Article/Articles_list'
+import ArticlesSelection from '../../src/components/Article/Articles_selection'
 import { Articles, SelectedArticles, SetSelectedArticles } from "../types"
 type Props = {
   articles: Articles[]
-  setReadyToRead: []
-  selectedArticles: SelectedArticles
+  setReadyToRead: [] | any
+  selectedArticles: SelectedArticles[]
   setSelectedArticles: SetSelectedArticles
 }
 
@@ -23,7 +23,7 @@ const PageArticles = ({ articles, selectedArticles, setSelectedArticles, setRead
       </Grid.Column>
       <Grid.Column width={6}>
         <aside>
-          <p>Lista artykulow</p>
+          <p>Lista wybranych artykulow</p>
         </aside>
         <ArticlesList
               selectedArticles={selectedArticles}

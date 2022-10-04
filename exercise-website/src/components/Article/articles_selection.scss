@@ -1,0 +1,15 @@
+.articles_selection{
+
+
+.articles_selection_list{
+    padding: 2rem;
+    background: #f6f6f6;
+
+    &__list{
+        list-style: none;
+        li:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+}
+}

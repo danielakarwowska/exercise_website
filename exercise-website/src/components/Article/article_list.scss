@@ -1,0 +1,13 @@
+.article_list {
+    padding: 1rem;
+    background: #f6f6f6;
+
+    li:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
+
+.article_list__list {
+    list-style: none;
+
+}

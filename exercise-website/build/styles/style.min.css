@@ -1,0 +1,33 @@
+body {
+  text-align: center;
+  padding: 2rem;
+}
+
+.article_floating {
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.article_list {
+  padding: 1rem;
+  background: #f6f6f6;
+}
+.article_list li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.article_list__list {
+  list-style: none;
+}
+
+.articles_selection .articles_selection_list {
+  padding: 2rem;
+  background: #f6f6f6;
+}
+.articles_selection .articles_selection_list__list {
+  list-style: none;
+}
+.articles_selection .articles_selection_list__list li:not(:last-child) {
+  margin-bottom: 1rem;
+}

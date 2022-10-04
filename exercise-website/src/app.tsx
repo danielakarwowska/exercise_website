@@ -10,7 +10,7 @@ const App = (): JSX.Element => {
 
     const [selectedArticles, setSelectedArticles] = useState<SelectedArticles[]>([])
     
-    const [readyToRead, setReadyToRead] = useState(false) 
+    const [readyToRead, setReadyToRead] = useState (false) 
 
     useEffect(() => {
         setArticles([

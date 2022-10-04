@@ -1,9 +1,8 @@
 import React from "react"
-import ArticlesList from './Articles'
 import { Button, Grid } from "semantic-ui-react"
 
 const PagePreview = () => {
-    return(
+    return (
         <div className="page_preview">
             <Grid>
                 <Grid.Column width={12}>
@@ -15,9 +14,9 @@ const PagePreview = () => {
                 </Grid.Column>
             </Grid>
             <div>
-    <Button content='Previous' icon='left arrow' labelPosition='left' />
-    <Button content='Next' icon='right arrow' labelPosition='right' />
-  </div>
+                <Button content='Previous' icon='left arrow' labelPosition='left' />
+                <Button content='Next' icon='right arrow' labelPosition='right' />
+            </div>
         </div>
     )
 }

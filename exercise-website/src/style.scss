@@ -1,0 +1,9 @@
+body {
+    text-align: center;
+    padding: 2rem;
+}
+
+
+@import 'components/Article/article_floating.scss';
+@import 'components/Article/article_list.scss';
+@import 'components/Article//articles_selection.scss'
