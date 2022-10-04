@@ -1,28 +1,35 @@
 import React from "react"
 import {Grid} from 'semantic-ui-react'
-import ArticlesFloating from '../components/article_floating'
-import { SelectedArticles } from "../types"
+import ArticlesList from './Articles_list'
+import ArticlesSelection from './Articles_selection'
+import { Articles, SelectedArticles, SetSelectedArticles } from "../types"
 type Props = {
-  articles: any
+  articles: Articles[]
+  setReadyToRead: []
+  selectedArticles: SelectedArticles
+  setSelectedArticles: SetSelectedArticles
 }
 
-const PageArticles = ({ articles }: Props) => {
+const PageArticles = ({ articles, selectedArticles, setSelectedArticles, setReadyToRead }: Props) => {
   return (
     <div className="articles">
       <Grid>
           <Grid.Column width={10}>
-      <ul>
-      {articles.map((article) => <li key={article.id}>
-        <ArticlesFloating title={article.title} description={article.description} id={""} setSelectedArticles={function (value: React.SetStateAction<SelectedArticles[]>): void {
-        } }/>
-      </li>
-      )}
-      </ul>
+      <ArticlesSelection
+      articles={articles}
+      selectedArticles={selectedArticles}
+      setSelectedArticles={setSelectedArticles}
+      />
       </Grid.Column>
       <Grid.Column width={6}>
         <aside>
           <p>Lista artykulow</p>
         </aside>
+        <ArticlesList
+              selectedArticles={selectedArticles}
+              setReadyToRead={setReadyToRead}
+              setSelectedArticles={setSelectedArticles}
+              />
       </Grid.Column>
       </Grid>
     </div>

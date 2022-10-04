@@ -1,29 +1,39 @@
 import React from "react"
+import { Button } from "semantic-ui-react"
 import ArticlePreview from "../components/article_preview"
-import { SelectedArticles } from "../types"
+import { SelectedArticles, SetSelectedArticles } from "../types"
 type Props = {
     selectedArticles: SelectedArticles[]
+    setSelectedArticles: SetSelectedArticles
+    setReadyToRead: any
 }
 
-const ArticlesList = ({ selectedArticles }: Props) => {
+const ArticlesList = ({ setReadyToRead, selectedArticles, setSelectedArticles  }: Props) => {
     const countOfArticles = selectedArticles.length
+
     return (
         <div className="article_list">
-            <h2>SelectedArticles</h2>
+            <h2>Selected Articles</h2>
             <p>You choose <strong>{countOfArticles}</strong></p>
             {countOfArticles > 0 && (
-                <ul>
+                <ul className="article_list_1">
                     {
-                        selectedArticles.map((article) => (
-                            <li key={article.id}>
-                                <ArticlePreview title={article.title}
-                                    id={article.id} description={""} />
+                        selectedArticles.map((selectedArticle) => (
+                            <li key={selectedArticle.id}>
+                                <ArticlePreview
+                                    article={selectedArticle}
+                                    setSelectedArticles={setSelectedArticles} />
                             </li>
                         ))}
                 </ul>
             )
             }
+            <Button content="Przeczytaj wybrane artykuły"
+            disabled={selectedArticles.length === 0}
+            onClick={() => setReadyToRead(true)}
+            />
         </div>
     )
 }
 export default ArticlesList
+
