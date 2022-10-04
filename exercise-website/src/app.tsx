@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Layout from './components/Layout'
 import PageArticles from './pages/Articles'
 import PagePreview from './pages/Page_preview'
+import Header from './components/Header'
 
 import { Articles, SelectedArticles } from './types'
 
@@ -54,6 +55,7 @@ const App = (): JSX.Element => {
     }, [])
     return (
         <Layout>
+            <Header/>
             {
                 !readyToRead
                 ?   (
@@ -64,7 +66,11 @@ const App = (): JSX.Element => {
                     setReadyToRead={setReadyToRead}
                       />
                 )
-                : <PagePreview/>
+                : <PagePreview setReadyToRead={undefined} selectedArticles={[]} setSelectedArticles={{
+                        id: '',
+                        title: '',
+                        description: ''
+                    }}/>
             }
 
         </Layout>

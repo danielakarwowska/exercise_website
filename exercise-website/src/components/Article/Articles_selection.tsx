@@ -14,7 +14,7 @@ const ArticlesSelection = ({ articles,selectedArticles, setSelectedArticles }: P
                 <ul className="articles_selection__list">
                     {
                         articles.map((article) =>
-                            <li key={article.id}>
+                            <li className="article_list__list" key={article.id}>
                                 <ArticleFloating 
                                 article={article}
                                 selectedArticles={selectedArticles}

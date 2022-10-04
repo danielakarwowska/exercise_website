@@ -22,9 +22,6 @@ const PageArticles = ({ articles, selectedArticles, setSelectedArticles, setRead
       />
       </Grid.Column>
       <Grid.Column width={6}>
-        <aside>
-          <p>Lista wybranych artykulow</p>
-        </aside>
         <ArticlesList
               selectedArticles={selectedArticles}
               setReadyToRead={setReadyToRead}

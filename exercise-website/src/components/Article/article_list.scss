@@ -1,7 +1,11 @@
 .article_list {
+    margin-top: 10rem;
     padding: 1rem;
-    background: #f6f6f6;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: beige;
 
+    padding: 1rem;
     li:not(:last-child) {
         margin-bottom: 1rem;
     }
@@ -9,5 +13,4 @@
 
 .article_list__list {
     list-style: none;
-
 }

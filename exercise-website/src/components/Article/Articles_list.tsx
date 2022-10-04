@@ -10,7 +10,6 @@ type Props = {
 
 const ArticlesList = ({ setReadyToRead, selectedArticles, setSelectedArticles  }: Props) => {
     const countOfArticles = selectedArticles.length
-
     return (
         <div className="article_list">
             <h2>Selected Articles</h2>
@@ -19,7 +18,7 @@ const ArticlesList = ({ setReadyToRead, selectedArticles, setSelectedArticles  }
                 <ul className="article_list__list">
                     {
                         selectedArticles.map((selectedArticle) => (
-                            <li key={selectedArticle.id}>
+                            <li   key={selectedArticle.id}>
                                 <ArticlePreview
                                     article={selectedArticle}
                                     setSelectedArticles={setSelectedArticles} />
